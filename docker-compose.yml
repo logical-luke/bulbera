@@ -1,0 +1,31 @@
+version: '3.1'
+
+services:
+
+    wordpress:
+        image: wordpress
+        restart: always
+        ports:
+            - 8080:80
+        environment:
+            WORDPRESS_DB_HOST: db
+            WORDPRESS_DB_USER: localuser
+            WORDPRESS_DB_PASSWORD: localpass
+            WORDPRESS_DB_NAME: localdb
+        volumes:
+            - wordpress:/var/www/html
+            - .:/var/www/html/wp-content/themes/bulbera
+    db:
+        image: mysql:5.7
+        restart: always
+        environment:
+            MYSQL_DATABASE: localdb
+            MYSQL_USER: localuser
+            MYSQL_PASSWORD: localpass
+            MYSQL_RANDOM_ROOT_PASSWORD: '1'
+        volumes:
+            - db:/var/lib/mysql
+
+volumes:
+    wordpress:
+    db:
