@@ -1,0 +1,39 @@
+{
+    "name": "logical-luke/bulbera",
+    "type": "wordpress-theme",
+    "description": "The lightweight wordpress theme for personal blog",
+    "keywords": [
+        "WordPress",
+        "Themes"
+    ],
+    "homepage": "https://github.com/logical-luke/bulbera",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Contributors",
+            "homepage": "https://github.com/logical-luke/bulbera/graphs/contributors"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+        "wptrt/wpthemereview": "^0.2.1",
+        "php-parallel-lint/php-parallel-lint": "^1.2.0",
+        "wp-cli/i18n-command": "^2.2.5"
+    },
+    "scripts": {
+        "lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor .",
+        "make-pot": "wp i18n make-pot . languages/_s.pot"
+    },
+    "support": {
+        "issues": "https://github.com/logical-luke/bulbera/issues",
+        "source": "https://github.com/logical-luke/bulbera"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
