@@ -138,3 +138,25 @@ if (!function_exists('wp_body_open')) {
         do_action('wp_body_open');
     }
 }
+
+if (!function_exists('bulbera_nav_menu')) {
+    function bulbera_nav_primay_menu()
+    {
+        $menu_items = get_menu_items_by_registered_slug('menu-1');
+        foreach ($menu_items as $menu_item) {
+            ?>
+            <p class="navbar-item">
+                <?php
+                $isActive =
+                    (int) get_queried_object_id() === (int) $menu_item->object_id
+                    || ((int) get_queried_object_id() === 0 && $menu_item->url === site_url() . '/');
+                ?>
+                <a class="<?= $isActive ? 'has-text-black' : '' ?>"
+                   href="<?= $menu_item->url ?>">
+                    <?= $menu_item->title ?>
+                </a>
+            </p>
+            <?php
+        }
+    }
+}
