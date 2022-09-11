@@ -22,3 +22,15 @@ function get_custom_logo_url(): ?string
 
     return null;
 }
+
+function get_menu_items_by_registered_slug(string $menu_slug): array
+{
+    $menu_items = [];
+
+    if (($locations = get_nav_menu_locations()) && isset($locations[$menu_slug]) && $locations[$menu_slug] !== 0) {
+        $menu = get_term($locations[$menu_slug]);
+        $menu_items = wp_get_nav_menu_items($menu->term_id);
+    }
+
+    return $menu_items;
+}
