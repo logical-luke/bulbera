@@ -29,7 +29,7 @@ get_header();
             <div class="tile is-parent">
                 <article class="tile is-child notification is-info">
                     <p class="title">Got feedback? I'd love to hear from you</p>
-                    <p class="subtitle">Send me a message at <a href="mailto:luke@logical-luke.com">luke@logical-luke.com</a></p>
+                    <p class="subtitle">Send me an email at <a href="mailto:luke@logical-luke.com">luke@logical-luke.com</a></p>
                 </article>
             </div>
         </div>
