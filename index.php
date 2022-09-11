@@ -4,49 +4,34 @@ declare(strict_types=1);
 
 get_header();
 ?>
-    <div class="tile is-ancestor">
+    <div class="tile is-ancestor center">
         <div class="tile is-vertical is-8">
             <div class="tile">
-                <div class="tile is-parent is-vertical">
-                    <article class="tile is-child notification is-primary">
-                        <p class="title">Vertical...</p>
-                        <p class="subtitle">Top tile</p>
-                    </article>
-                    <article class="tile is-child notification is-warning">
-                        <p class="title">...tiles</p>
-                        <p class="subtitle">Bottom tile</p>
+                <div class="tile is-parent">
+                    <article class="tile is-child notification is-info">
+                        <p class="title">Why is honesty most important?</p>
+                        <p class="subtitle">Coming Soon</p>
+                        <figure class="image is-4by3">
+                            <img src="<?= get_template_directory_uri() . '/images/placeholders/honesty.png' ?>">
+                        </figure>
                     </article>
                 </div>
                 <div class="tile is-parent">
                     <article class="tile is-child notification is-info">
-                        <p class="title">Middle tile</p>
-                        <p class="subtitle">With an image</p>
+                        <p class="title">To be revealed...</p>
+                        <p class="subtitle">I can't wait to share details about this post!</p>
                         <figure class="image is-4by3">
-                            <img src="https://bulma.io/images/placeholders/640x480.png">
+                            <img src="<?= get_template_directory_uri() . '/images/placeholders/to-be-revealed.png' ?>">
                         </figure>
                     </article>
                 </div>
             </div>
             <div class="tile is-parent">
-                <article class="tile is-child notification is-danger">
-                    <p class="title">Wide tile</p>
-                    <p class="subtitle">Aligned with the right tile</p>
-                    <div class="content">
-                        <!-- Content -->
-                    </div>
+                <article class="tile is-child notification is-info">
+                    <p class="title">Got feedback? I'd love to hear from you</p>
+                    <p class="subtitle">Send me a message at <a href="mailto:luke@logical-luke.com">luke@logical-luke.com</a></p>
                 </article>
             </div>
-        </div>
-        <div class="tile is-parent">
-            <article class="tile is-child notification is-success">
-                <div class="content">
-                    <p class="title">Tall tile</p>
-                    <p class="subtitle">With even more content</p>
-                    <div class="content">
-                        <!-- Content -->
-                    </div>
-                </div>
-            </article>
         </div>
     </div>
 <?php
