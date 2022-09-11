@@ -7,50 +7,61 @@ declare(strict_types=1);
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php wp_head(); ?>
+    <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-    <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'bulbera' ); ?></a>
 
-    <header id="masthead" class="site-header">
-        <div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-                <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-                                          rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php
-			else :
-				?>
-                <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-                                         rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-			$bulbera_description = get_bloginfo( 'description', 'display' );
-			if ( $bulbera_description || is_customize_preview() ) :
-				?>
-                <p class="site-description"><?php echo $bulbera_description; ?></p>
-			<?php endif; ?>
-        </div><!-- .site-branding -->
+<section class="section">
+    <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'bulbera'); ?></a>
+    <div class="container">
+        <div class="columns is-mobile is-marginless has-text-weight-bold">
+            <div class="column left">
+                <figure class="image is-96x96">
+                    <img class="is-rounded" src="<?= get_custom_logo_url() ?>" alt="Logical-Luke">
+                </figure>
+                <p>Logical Luke 💡</p>
+            </div>
+            <div class="column center desktop">
+                <?php
+                if (has_nav_menu('menu-1')) {
+                    bulbera_nav_primay_menu();
+                }
+                ?>
+            </div>
+            <div class="column right">
+                <p class="navbar-item">
+                    <a class="has-text-black" target="_blank" href="https://github.com/logical-luke">
+                        <i class="fas fa-brands fa-github"></i>
+                    </a>
+                </p>
+                <p class="navbar-item">
+                    <a class="has-text-black" target="_blank" href="https://twitter.com/logic_of_luke">
+                        <i class="fas fa-brands fa-twitter"></i>
+                    </a>
+                </p>
+                <p class="navbar-item">
+                    <a class="has-text-black" target="_blank" href="https://stackoverflow.com/users/5031934/logical-luke">
+                        <i class="fas fa-brands fa-stack-overflow"></i>
+                    </a>
+                </p>
+                <p class="navbar-item">
+                    <a class="has-text-black" target="_blank"
+                       href="https://open.spotify.com/user/4a5qb5x7jx0hdfws3f7dojba3?si=5a7af01ea229484f">
+                        <i class="fas fa-brands fa-spotify"></i>
+                    </a>
+                </p>
+                <figure class="navbar-item image has-text-black">
+                    <i class="fas fa-bars"></i>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="page" class="section site">
 
-        <nav id="site-navigation" class="main-navigation">
-            <button class="menu-toggle" aria-controls="primary-menu"
-                    aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bulbera' ); ?></button>
-			<?php
-			wp_nav_menu(
-				[
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				]
-			);
-			?>
-        </nav><!-- #site-navigation -->
-    </header><!-- #masthead -->
