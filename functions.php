@@ -61,13 +61,6 @@ function bulbera_setup()
 
 add_action('after_setup_theme', 'bulbera_setup');
 
-function bulbera_content_width()
-{
-    $GLOBALS['content_width'] = apply_filters('bulbera_content_width', 640);
-}
-
-add_action('after_setup_theme', 'bulbera_content_width', 0);
-
 function bulbera_widgets_init()
 {
     register_sidebar(
