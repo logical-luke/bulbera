@@ -18,3 +18,38 @@ Use it to make something cool, have fun, and share what you've learned.
 Bulbera is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
+
+.center, .center-column, .top, .right, .bottom, .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-column {
+    flex-direction: column;
+}
+
+.top    { align-items:     flex-start; }
+.right  { justify-content: flex-end;   }
+.bottom { align-items:     flex-end;   }
+.left   { justify-content: flex-start; }
+
+.single-spaced, .single-spaced * {
+    line-height: 1;
+}
+
+@media (max-width: 1024px) {
+    .desktop {
+        display: none;
+    }
+}
+
+
+/*!*! debug.css | MIT License | zaydek.github.com/debug.css *!*/
+/**:not(path):not(g) {*/
+/*    color:                    hsla(210, 100%, 100%, 0.9) !important;*/
+/*    background:               hsla(210, 100%,  50%, 0.5) !important;*/
+/*    outline:    solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;*/
+
+/*    box-shadow: none !important;*/
+/*}*/
