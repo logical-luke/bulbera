@@ -65,7 +65,7 @@ declare(strict_types=1);
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-
+    <link rel="shortcut icon" href="<?= get_template_directory_uri() . '/images/favicons/favicon.png'?>">
     <?php wp_head(); ?>
 </head>
 
