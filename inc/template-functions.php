@@ -2,15 +2,16 @@
 
 declare(strict_types=1);
 
-function bulbera_body_classes( $classes ) {
-	if ( ! is_singular() ) {
-		$classes[] = 'hfeed';
-	}
+function bulbera_body_classes($classes)
+{
+    if (!is_singular()) {
+        $classes[] = 'hfeed';
+    }
 
-	return $classes;
+    return $classes;
 }
 
-add_filter( 'body_class', 'bulbera_body_classes' );
+add_filter('body_class', 'bulbera_body_classes');
 
 function get_custom_logo_url(): ?string
 {
