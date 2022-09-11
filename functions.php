@@ -85,7 +85,6 @@ add_action( 'widgets_init', 'bulbera_widgets_init' );
 
 function bulbera_scripts() {
 	wp_enqueue_style( 'bulbera-style', get_stylesheet_uri(), [], BULBERA_VERSION );
-	wp_style_add_data( 'bulbera-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'bulbera-navigation', get_template_directory_uri() . '/js/navigation.js', [], BULBERA_VERSION,
 		true );
