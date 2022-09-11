@@ -7,10 +7,6 @@ function bulbera_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-		$classes[] = 'no-sidebar';
-	}
-
 	return $classes;
 }
 
