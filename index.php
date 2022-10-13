@@ -4,33 +4,74 @@ declare(strict_types=1);
 
 get_header();
 ?>
-    <div class="tile is-ancestor center">
-        <div class="tile is-vertical is-8">
-            <div class="tile">
-                <div class="tile is-parent">
-                    <article class="tile is-child notification is-info">
-                        <p class="title">Why should you automate?</p>
-                        <p class="subtitle">Coming Soon</p>
-                        <figure class="image is-4by3">
-                            <img src="<?= get_template_directory_uri() . '/images/placeholders/automate.png' ?>">
+    <div class="container">
+        <div class="columns center">
+            <div class="column is-half">
+                <?php
+                    if (have_posts()) {
+                        while (have_posts()) {
+                            the_post();
+                ?>
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-16by9">
+                            <?php the_post_thumbnail( 'main-page-thumbnail'); ?>
                         </figure>
-                    </article>
+                    </div>
+
+                    <div class="card-content">
+                        <p class="title">
+                            <?php the_title(); ?>
+                        </p>
+
+                        <p class="subtitle">
+                            <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('F jS, Y'); ?></time>
+                        </p>
+
+                        <div class="content">
+                            <?php the_excerpt(); ?>
+                        </div>
+                    </div>
+<!--                            <footer class="card-footer">-->
+<!--                                <a href="#" class="card-footer-item">Save</a>-->
+<!--                                <a href="#" class="card-footer-item">Edit</a>-->
+<!--                                <a href="#" class="card-footer-item">Delete</a>-->
+<!--                            </footer>-->
                 </div>
-                <div class="tile is-parent">
-                    <article class="tile is-child notification is-info">
-                        <p class="title">To be revealed...</p>
-                        <p class="subtitle">I can't wait to share details about this post!</p>
-                        <figure class="image is-4by3">
-                            <img src="<?= get_template_directory_uri() . '/images/placeholders/to-be-revealed.png' ?>">
+                <?php
+                        }
+                    }
+                    else {
+                ?>
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-16by9">
+                            <img width="640" height="380" src="<?= get_template_directory_uri() . '/images/placeholders/to-be-revealed.png' ?>">
                         </figure>
-                    </article>
+                    </div>
+
+                    <div class="card-content">
+                        <p class="title">
+                            I can't wait to share details about this post.
+                        </p>
+
+                        <p class="subtitle">
+                            Coming soon!
+                        </p>
+
+                        <div class="content">
+                            There will be an exciting first post on my blog 🎉.
+                        </div>
+                    </div>
+                    <!--                            <footer class="card-footer">-->
+                    <!--                                <a href="#" class="card-footer-item">Save</a>-->
+                    <!--                                <a href="#" class="card-footer-item">Edit</a>-->
+                    <!--                                <a href="#" class="card-footer-item">Delete</a>-->
+                    <!--                            </footer>-->
                 </div>
-            </div>
-            <div class="tile is-parent">
-                <article class="tile is-child notification is-info">
-                    <p class="title">Got feedback? I'd love to hear from you</p>
-                    <p class="subtitle">Send me an email at <a href="mailto:luke@logical-luke.com">luke@logical-luke.com</a></p>
-                </article>
+                <?php
+                    }
+                ?>
             </div>
         </div>
     </div>
