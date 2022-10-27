@@ -79,7 +79,6 @@ declare(strict_types=1);
                 <figure class="image is-96x96">
                     <img class="is-rounded" src="<?= get_custom_logo_url() ?>" alt="Logical-Luke">
                 </figure>
-                <p>Logical Luke 💡</p>
             </div>
 <!--            <div class="column center desktop">-->
 <!--                --><?php
@@ -107,12 +106,6 @@ declare(strict_types=1);
                 <p class="navbar-item">
                     <a class="has-text-black" target="_blank" href="https://stackoverflow.com/users/5031934/logical-luke">
                         <i class="fas fa-brands fa-stack-overflow"></i>
-                    </a>
-                </p>
-                <p class="navbar-item">
-                    <a class="has-text-black" target="_blank"
-                       href="https://open.spotify.com/user/4a5qb5x7jx0hdfws3f7dojba3?si=5a7af01ea229484f">
-                        <i class="fas fa-brands fa-spotify"></i>
                     </a>
                 </p>
 <!--                <figure class="navbar-item image has-text-black">-->
