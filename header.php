@@ -78,6 +78,7 @@ declare(strict_types=1);
             <div class="column left">
                 <figure class="image is-96x96">
                     <img class="is-rounded" src="<?= get_custom_logo_url() ?>" alt="Logical-Luke">
+                    <figcaption>Logical Luke</figcaption>
                 </figure>
             </div>
 <!--            <div class="column center desktop">-->
