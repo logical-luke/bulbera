@@ -95,6 +95,11 @@ declare(strict_types=1);
                     </a>
                 </p>
                 <p class="navbar-item">
+                    <a class="has-text-black" target="_blank" href="https://linkedin.com/in/logical-luke">
+                        <i class="fas fa-brands fa-linkedin"></i>
+                    </a>
+                </p>
+                <p class="navbar-item">
                     <a class="has-text-black" target="_blank" href="https://twitter.com/logic_of_luke">
                         <i class="fas fa-brands fa-twitter"></i>
                     </a>
