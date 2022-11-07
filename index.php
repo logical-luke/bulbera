@@ -15,13 +15,15 @@ get_header();
                 <div class="card">
                     <div class="card-image">
                         <figure class="image is-16by9">
-                            <?php the_post_thumbnail( 'main-page-thumbnail'); ?>
+                            <a href="<?= get_permalink(); ?>">
+                                <?php the_post_thumbnail( 'main-page-thumbnail'); ?>
+                            </a>
                         </figure>
                     </div>
 
                     <div class="card-content">
                         <p class="title">
-                            <?php the_title(); ?>
+                            <a href="<?= get_permalink(); ?>"><?php the_title(); ?></a>
                         </p>
 
                         <p class="subtitle">
@@ -30,6 +32,7 @@ get_header();
 
                         <div class="content">
                             <?php the_excerpt(); ?>
+                            <p><a href="<?= get_permalink(); ?>">Read more</a></p>
                         </div>
                     </div>
 <!--                            <footer class="card-footer">-->
