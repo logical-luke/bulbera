@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 get_header();
 ?>
-    <div class="container">
-        <div class="columns center">
-            <div class="column is-half">
                 <?php
                     if (have_posts()) {
                         while (have_posts()) {
@@ -75,8 +72,5 @@ get_header();
                 <?php
                     }
                 ?>
-            </div>
-        </div>
-    </div>
 <?php
 get_footer();

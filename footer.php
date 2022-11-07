@@ -3,7 +3,9 @@
 declare(strict_types=1);
 
 ?>
-
+            </div>
+        </div>
+    </div>
 </section>
 <footer class="footer">
     <?php wp_footer(); ?>
