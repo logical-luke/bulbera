@@ -92,11 +92,6 @@ function bulbera_scripts()
         true
     );
 
-    wp_enqueue_script(
-        'font-awesome',
-        'https://use.fontawesome.com/releases/v6.2.0/js/all.js'
-    );
-
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
