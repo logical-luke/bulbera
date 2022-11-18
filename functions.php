@@ -97,6 +97,11 @@ function bulbera_scripts()
     }
 }
 
+function bulbera_custom_excerpt_length( $length ) {
+    return 80;
+}
+add_filter( 'excerpt_length', 'bulbera_custom_excerpt_length', 999 );
+
 add_action('wp_enqueue_scripts', 'bulbera_scripts');
 
 require get_template_directory() . '/inc/template-tags.php';
