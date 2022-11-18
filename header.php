@@ -86,23 +86,29 @@ declare(strict_types=1);
             <div class="column right">
                 <p class="navbar-item">
                     <a class="has-text-black" target="_blank" href="https://github.com/logical-luke">
-                        <i class="fas fa-brands fa-github"></i>
+                        <img width="24"
+                             height="24"
+                             src="<?= get_template_directory_uri() . '/images/icons/github.svg' ?>"
+                             alt="GitHub"
+                        />
                     </a>
                 </p>
                 <p class="navbar-item">
                     <a class="has-text-black" target="_blank" href="https://linkedin.com/in/logical-luke">
-                        <i class="fas fa-brands fa-linkedin"></i>
+                        <img width="24"
+                             height="24"
+                             src="<?= get_template_directory_uri() . '/images/icons/linkedin.svg' ?>"
+                             alt="LinkedIn"
+                        />
                     </a>
                 </p>
                 <p class="navbar-item">
                     <a class="has-text-black" target="_blank" href="https://twitter.com/logic_of_luke">
-                        <i class="fas fa-brands fa-twitter"></i>
-                    </a>
-                </p>
-                <p class="navbar-item">
-                    <a class="has-text-black" target="_blank"
-                       href="https://stackoverflow.com/users/5031934/logical-luke">
-                        <i class="fas fa-brands fa-stack-overflow"></i>
+                        <img width="24"
+                             height="24"
+                             src="<?= get_template_directory_uri() . '/images/icons/twitter.svg' ?>"
+                             alt="Twitter"
+                        />
                     </a>
                 </p>
             </div>

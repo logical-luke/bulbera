@@ -82,7 +82,7 @@ function bulbera_scripts()
 {
     wp_enqueue_style('bulbera-style', get_stylesheet_uri(), ['bulma-cdn'], BULBERA_VERSION);
 
-    wp_enqueue_style('bulma-cdn', 'https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css');
+    wp_enqueue_style('bulma-cdn', '//cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css');
 
     wp_enqueue_script(
         'bulbera-navigation',
