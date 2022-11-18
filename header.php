@@ -77,9 +77,11 @@ declare(strict_types=1);
         <div class="columns is-mobile is-marginless has-text-weight-bold">
             <div class="column left">
                 <a href="<?= get_home_url() ?>">
-                    <figure class="image is-96x96">
-                        <img class="is-rounded" src="<?= get_custom_logo_url() ?>" alt="Logical-Luke">
-                        <figcaption>Logical Luke</figcaption>
+                    <figure class="image">
+                        <img class="logo"
+                             src="<?= get_custom_logo_url() ?>"
+                             alt="Logical-Luke"
+                        />
                     </figure>
                 </a>
             </div>
