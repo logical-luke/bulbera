@@ -50,6 +50,12 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
     }
 }
 
+.breadcrumb a {
+    white-space: break-spaces;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
 
 /*!*! debug.css | MIT License | zaydek.github.com/debug.css *!*/
 /**:not(path):not(g) {*/
