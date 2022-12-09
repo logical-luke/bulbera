@@ -13,10 +13,15 @@ declare(strict_types=1);
         <div class="card-content">
             <?php the_title('<h1 class="title">', '</h1>'); ?>
 
-            <p class="subtitle">
-                <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('F jS, Y'); ?></time>
-            </p>
-
+            <?php
+            if (!is_page()) {
+            ?>
+                <p class="subtitle">
+                    <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('F jS, Y'); ?></time>
+                </p>
+            <?php
+            }
+            ?>
             <div class="content">
                 <?php
                 the_content(
