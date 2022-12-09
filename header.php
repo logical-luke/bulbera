@@ -85,7 +85,7 @@ declare(strict_types=1);
                     </figure>
                 </a>
             </div>
-            <div class="column center">
+            <div class="column center until-widescreen">
                 <p class="navbar-item">
                     <a class="has-text-black" target="_blank" href="https://github.com/logical-luke">
                         <img width="24"
