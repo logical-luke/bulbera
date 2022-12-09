@@ -121,15 +121,22 @@ declare(strict_types=1);
     <div class="container">
         <div class="columns center">
             <div class="column is-two-thirds">
-    <?php
-    if (!is_home()) {
-        ?>
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-            <ul>
-                <li><a href="<?= get_home_url() ?>">Home</a></li>
-                <li><a href="<?= get_permalink() ?>"><?= get_the_title() ?></a></li>
-            </ul>
-        </nav>
-        <?php
-    }
-    ?>
+                <?php
+                if (!is_home()) {
+                    ?>
+                    <nav class="breadcrumb" aria-label="breadcrumbs">
+                        <ul>
+                            <li>
+                                <a href="<?= get_home_url() ?>">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-home" aria-hidden="true"></i>
+                                    </span>
+                                    Home
+                                </a>
+                            </li>
+                            <li><a href="<?= get_permalink() ?>"><?= get_the_title() ?></a></li>
+                        </ul>
+                    </nav>
+                    <?php
+                }
+                ?>
