@@ -85,6 +85,13 @@ declare(strict_types=1);
                     </figure>
                 </a>
             </div>
+            <div class="column center desktop">
+                <?php
+                if (has_nav_menu('menu-1')) {
+                    bulbera_nav_primay_menu();
+                }
+                ?>
+            </div>
             <div class="column right">
                 <p class="navbar-item">
                     <a class="has-text-black" target="_blank" href="https://github.com/logical-luke">
@@ -113,7 +120,23 @@ declare(strict_types=1);
                         />
                     </a>
                 </p>
+                <p class="navbar-item until-widescreen">
+                    <a id="mobile-icon" class="has-text-black" href="">
+                        <img width="24"
+                             height="24"
+                             src="<?= get_template_directory_uri() . '/images/icons/menu.svg' ?>"
+                             alt="Twitter"
+                        />
+                    </a>
+                </p>
             </div>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <?php
+            if (has_nav_menu('menu-1')) {
+                bulbera_nav_primay_menu();
+            }
+            ?>
         </div>
     </div>
 </section>
@@ -121,15 +144,15 @@ declare(strict_types=1);
     <div class="container">
         <div class="columns center">
             <div class="column is-two-thirds">
-    <?php
-    if (!is_home()) {
-        ?>
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-            <ul>
-                <li><a href="<?= get_home_url() ?>">Home</a></li>
-                <li><a href="<?= get_permalink() ?>"><?= get_the_title() ?></a></li>
-            </ul>
-        </nav>
-        <?php
-    }
-    ?>
+                <?php
+                if (!is_home() && !is_page()) {
+                    ?>
+                    <nav class="breadcrumb" aria-label="breadcrumbs">
+                        <ul>
+                            <li><a href="<?= get_home_url() ?>">Home</a></li>
+                            <li><a href="<?= get_permalink() ?>"><?= get_the_title() ?></a></li>
+                        </ul>
+                    </nav>
+                    <?php
+                }
+                ?>
