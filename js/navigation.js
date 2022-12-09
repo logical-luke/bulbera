@@ -10,7 +10,9 @@
 		event.preventDefault();
 		const isHidden = mobileMenu.style.display === 'none' || mobileMenu.style.display === '';
 		if ( isHidden ) {
-			mobileMenu.style.display = 'block';
+			mobileMenu.style.display = 'flex';
+			mobileMenu.style.flexDirection = 'column';
+			mobileMenu.style.alignItems = 'center';
 		} else {
 			// Hide element
 			mobileMenu.style.display = 'none';

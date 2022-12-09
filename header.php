@@ -74,8 +74,8 @@ declare(strict_types=1);
 
 <section class="section">
     <div class="container">
-        <div class="columns is-mobile is-marginless has-text-weight-bold">
-            <div class="column left">
+        <div class="columns is-centered until-widescreen">
+            <div class="column center until-widescreen">
                 <a href="<?= get_home_url() ?>">
                     <figure class="image">
                         <img class="logo"
@@ -85,14 +85,7 @@ declare(strict_types=1);
                     </figure>
                 </a>
             </div>
-            <div class="column center desktop">
-                <?php
-                if (has_nav_menu('menu-1')) {
-                    bulbera_nav_primay_menu();
-                }
-                ?>
-            </div>
-            <div class="column right">
+            <div class="column center">
                 <p class="navbar-item">
                     <a class="has-text-black" target="_blank" href="https://github.com/logical-luke">
                         <img width="24"
@@ -120,7 +113,7 @@ declare(strict_types=1);
                         />
                     </a>
                 </p>
-                <p class="navbar-item until-widescreen">
+                <p class="navbar-item">
                     <a id="mobile-icon" class="has-text-black" href="">
                         <img width="24"
                              height="24"
@@ -130,13 +123,61 @@ declare(strict_types=1);
                     </a>
                 </p>
             </div>
+            <div class="column center mobile-menu" id="mobile-menu">
+                <?php
+                if (has_nav_menu('menu-1')) {
+                    bulbera_nav_primay_menu();
+                }
+                ?>
+            </div>
         </div>
-        <div class="mobile-menu" id="mobile-menu">
-            <?php
-            if (has_nav_menu('menu-1')) {
-                bulbera_nav_primay_menu();
-            }
-            ?>
+        <div class="columns is-marginless has-text-weight-bold">
+            <div class="column desktop left">
+                <a href="<?= get_home_url() ?>">
+                    <figure class="image">
+                        <img class="logo"
+                             src="<?= get_custom_logo_url() ?>"
+                             alt="Logical-Luke"
+                        />
+                    </figure>
+                </a>
+            </div>
+            <div class="column desktop center">
+                <?php
+                if (has_nav_menu('menu-1')) {
+                    bulbera_nav_primay_menu();
+                }
+                ?>
+            </div>
+            <div class="column desktop right">
+                <p class="navbar-item">
+                    <a class="has-text-black" target="_blank" href="https://github.com/logical-luke">
+                        <img width="24"
+                             height="24"
+                             src="<?= get_template_directory_uri() . '/images/icons/github.svg' ?>"
+                             alt="GitHub"
+                        />
+                    </a>
+                </p>
+                <p class="navbar-item">
+                    <a class="has-text-black" target="_blank" href="https://linkedin.com/in/logical-luke">
+                        <img width="24"
+                             height="24"
+                             src="<?= get_template_directory_uri() . '/images/icons/linkedin.svg' ?>"
+                             alt="LinkedIn"
+                        />
+                    </a>
+                </p>
+                <p class="navbar-item">
+                    <a class="has-text-black" target="_blank" href="https://twitter.com/logic_of_luke">
+                        <img width="24"
+                             height="24"
+                             src="<?= get_template_directory_uri() . '/images/icons/twitter.svg' ?>"
+                             alt="Twitter"
+                        />
+                    </a>
+                </p>
+            </div>
         </div>
     </div>
 </section>

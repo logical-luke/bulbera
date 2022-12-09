@@ -73,6 +73,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
     display: none;
 }
 
+.logo {
+    width:100%;
+    max-width:256px;
+}
+
 
 /*!*! debug.css | MIT License | zaydek.github.com/debug.css *!*/
 /**:not(path):not(g) {*/
