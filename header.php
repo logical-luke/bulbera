@@ -72,10 +72,10 @@ declare(strict_types=1);
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<section class="section">
+<section class="section navigation">
     <div class="container">
         <div class="columns is-centered until-widescreen">
-            <div class="column center until-widescreen">
+            <div class="column p-0 center until-widescreen">
                 <a href="<?= get_home_url() ?>">
                     <figure class="image">
                         <img class="logo"
@@ -85,7 +85,7 @@ declare(strict_types=1);
                     </figure>
                 </a>
             </div>
-            <div class="column center until-widescreen">
+            <div class="column p-0 center until-widescreen">
                 <p class="navbar-item">
                     <a class="has-text-black" target="_blank" href="https://github.com/logical-luke">
                         <img width="24"
