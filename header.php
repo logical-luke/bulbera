@@ -123,13 +123,6 @@ declare(strict_types=1);
                     </a>
                 </p>
             </div>
-            <div class="column center mobile-menu" id="mobile-menu">
-                <?php
-                if (has_nav_menu('menu-1')) {
-                    bulbera_nav_primay_menu();
-                }
-                ?>
-            </div>
         </div>
         <div class="columns is-marginless has-text-weight-bold">
             <div class="column desktop left">
@@ -177,6 +170,15 @@ declare(strict_types=1);
                         />
                     </a>
                 </p>
+            </div>
+        </div>
+        <div class="columns is-marginless has-text-weight-bold">
+            <div class="column center mobile-menu" id="mobile-menu">
+                <?php
+                if (has_nav_menu('menu-1')) {
+                    bulbera_nav_primay_menu();
+                }
+                ?>
             </div>
         </div>
     </div>
