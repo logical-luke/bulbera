@@ -45,7 +45,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 
 @media screen and (min-width: 1024px) {
-    .section {
+    .navigation {
         padding: 0.5rem 0.5rem;
     }
 }
