@@ -19,6 +19,10 @@ Bulbera is based on Underscores https://underscores.me/, (C) 2012-2020 Automatti
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .center, .center-column, .top, .right, .bottom, .left {
     display: flex;
     justify-content: center;

@@ -81,8 +81,11 @@ add_action('widgets_init', 'bulbera_widgets_init');
 function bulbera_scripts()
 {
     wp_enqueue_style('bulma-cdn', '//cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css');
-
-    wp_enqueue_style('bulbera-style', get_stylesheet_uri(), ['bulma-cdn'], BULBERA_VERSION);
+    wp_enqueue_style(
+        'google-fonts',
+        '//fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap'
+    );
+    wp_enqueue_style('bulbera-style', get_stylesheet_uri(), ['bulma-cdn', 'google-fonts'], BULBERA_VERSION);
 
     wp_enqueue_script(
         'bulbera-navigation',
