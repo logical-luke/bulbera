@@ -7,7 +7,7 @@ get_header();
 <?php
 if (have_posts()) {
     ?>
-    <h2 class="title is-2 center">Recent posts</h2>
+    <h2 class="title is-2 center">From Blog</h2>
     <div class="columns">
         <?php
         while (have_posts()) {
