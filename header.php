@@ -191,7 +191,7 @@ declare(strict_types=1);
             <div class="columns center">
                 <div class="column center">
                     <figure class="image is-128x128">
-                        <img alt="Logical Luke" width="128" height="128" class="is-rounded" src="<?= get_template_directory_uri() ?>/images/lukes-avatar.png"/>
+                        <img alt="Logical Luke" src="<?= get_template_directory_uri() ?>/images/avatar.png"/>
                     </figure>
                 </div>
                 <div class="column">
