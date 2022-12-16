@@ -3,7 +3,9 @@
 declare(strict_types=1);
 
 ?>
+<?php if (!is_page()) { ?>
 <div class="card">
+<?php } ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <div class="card-image">
             <a href="<?= get_permalink(); ?>">
@@ -48,4 +50,6 @@ declare(strict_types=1);
             </div>
         </div>
     </article>
+<?php if (!is_page()) { ?>
 </div>
+<?php } ?>
