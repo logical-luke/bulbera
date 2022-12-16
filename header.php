@@ -194,11 +194,11 @@ declare(strict_types=1);
                         <img alt="Logical Luke" width="128" height="128" class="is-rounded" src="<?= get_template_directory_uri() ?>/images/lukes-avatar.png"/>
                     </figure>
                 </div>
-                <div class="column ">
-                    <p class="title">
+                <div class="column">
+                    <p class="title has-text-black">
                         Hi!
                     </p>
-                    <p class="subtitle">
+                    <p class="subtitle has-text-black">
                         I'm helping other developers to grow, stay productive, and find their well-being.
                     </p>
                 </div>
