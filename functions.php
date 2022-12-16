@@ -121,3 +121,5 @@ function add_svg_files_support($mimes) {
     return $mimes;
 }
 add_filter('upload_mimes', 'add_svg_files_support');
+
+add_image_size( 'main-page-thumbnail', 1024, 756 );
