@@ -116,7 +116,7 @@ declare(strict_types=1);
                     </a>
                 </p>
                 <p class="navbar-item">
-                    <a id="mobile-icon" class="has-text-black" href="">
+                    <a id="mobile-icon" class="has-text-black" href="#">
                         <img width="24"
                              height="24"
                              src="<?= get_template_directory_uri() . '/images/icons/menu.svg' ?>"
