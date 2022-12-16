@@ -34,7 +34,6 @@ if (have_posts()) {
 
                         <div class="content">
                             <?php the_excerpt(); ?>
-                            <p><a href="<?= get_permalink(); ?>">Read more</a></p>
                         </div>
                     </div>
                     <!--                            <footer class="card-footer">-->
