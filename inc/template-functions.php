@@ -34,3 +34,12 @@ function get_menu_items_by_registered_slug(string $menu_slug): array
 
     return $menu_items;
 }
+
+function get_estimated_reading_time($post = null)
+{
+    $post = get_post($post);
+    $content = get_post_field('post_content', $post->ID);
+    $word_count = str_word_count(strip_tags($content));
+
+    return ceil($word_count / 260);
+}

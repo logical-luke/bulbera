@@ -22,25 +22,17 @@ if (have_posts()) {
                             </a>
                         </figure>
                     </div>
-
-                    <div class="card-content">
-                        <p class="title">
+                    <div class="card-header">
+                        <p class="card-header-title">
                             <a href="<?= get_permalink(); ?>"><?php the_title(); ?></a>
                         </p>
-
-                        <p class="subtitle">
-                            <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('F jS, Y'); ?></time>
+                        <p class="card-header-icon">
+                            ~<?= get_estimated_reading_time() ?> minutes
                         </p>
-
-                        <div class="content">
-                            <?php the_excerpt(); ?>
-                        </div>
                     </div>
-                    <!--                            <footer class="card-footer">-->
-                    <!--                                <a href="#" class="card-footer-item">Save</a>-->
-                    <!--                                <a href="#" class="card-footer-item">Edit</a>-->
-                    <!--                                <a href="#" class="card-footer-item">Delete</a>-->
-                    <!--                            </footer>-->
+                    <div class="card-content">
+                        <?php the_excerpt(); ?>
+                    </div>
                 </div>
             </div>
             <?php

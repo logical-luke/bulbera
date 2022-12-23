@@ -18,8 +18,10 @@ declare(strict_types=1);
             <?php
             if (!is_page()) {
             ?>
-                <p class="subtitle">
-                    <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('F jS, Y'); ?></time>
+                <p class="subtitle update-date">
+                    Last updated: <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_modified_time('M d, Y'); ?></time>
+                    <?php $estimated_time = get_estimated_reading_time(); ?>
+                    <br /><?= $estimated_time ?> minute<?= $estimated_time > 1 ? 's' : '' ?> of reading
                 </p>
             <?php
             }

@@ -99,10 +99,12 @@ function bulbera_scripts()
     }
 }
 
-function bulbera_custom_excerpt_length( $length ) {
+function bulbera_custom_excerpt_length($length)
+{
     return 80;
 }
-add_filter( 'excerpt_length', 'bulbera_custom_excerpt_length', 999 );
+
+add_filter('excerpt_length', 'bulbera_custom_excerpt_length', 999);
 
 add_action('wp_enqueue_scripts', 'bulbera_scripts');
 
@@ -116,10 +118,13 @@ if (defined('JETPACK__VERSION')) {
     require get_template_directory() . '/inc/jetpack.php';
 }
 
-function add_svg_files_support($mimes) {
+function add_svg_files_support($mimes)
+{
     $mimes['svg'] = 'image/svg+xml';
+
     return $mimes;
 }
+
 add_filter('upload_mimes', 'add_svg_files_support');
 
-add_image_size( 'main-page-thumbnail', 1024, 756 );
+add_image_size('main-page-thumbnail', 1024, 756);
