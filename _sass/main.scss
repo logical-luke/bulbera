@@ -113,6 +113,10 @@ body {
 .update-date {
   font-size: 0.8rem;
 }
+
+.content li+li {
+  margin-top: 0.75em;
+}
 /*!*! debug.css | MIT License | zaydek.github.com/debug.css *!*/
 /**:not(path):not(g) {*/
 /*    color:                    hsla(210, 100%, 100%, 0.9) !important;*/
