@@ -26,7 +26,7 @@ if (have_posts()) {
                         <p class="card-header-title">
                             <a href="<?= get_permalink(); ?>"><?php the_title(); ?></a>
                         </p>
-                        <p class="card-header-icon">
+                        <p class="right p-3 has-text-right">
                             ~<?= get_estimated_reading_time() ?> minutes
                         </p>
                     </div>
